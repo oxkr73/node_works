@@ -8,11 +8,11 @@ copydir(
   fromFolder,
   toFolder,
   function(stat, filepath, filename) {
-    // Filter for exclude files
+    // Filter to exclude files
     /*if(stat === 'file' && path.extname(filepath) === '.html') {
       return false;
     }*/
-    // Filter for exclude directories
+    // Filter to exclude directories
     if (
       stat === "directory" &&
       (filename === "node_modules" || filename === ".git")
