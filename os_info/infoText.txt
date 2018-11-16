@@ -1,0 +1,4 @@
+
+CPUS => [{"model":"Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz","speed":3192,"times":{"user":1308546,"nice":0,"sys":1545375,"idle":28616218,"irq":591125}},{"model":"Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz","speed":3192,"times":{"user":1270046,"nice":0,"sys":732093,"idle":29467812,"irq":10281}},{"model":"Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz","speed":3192,"times":{"user":1274562,"nice":0,"sys":763328,"idle":29432062,"irq":13203}},{"model":"Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz","speed":3192,"times":{"user":1476406,"nice":0,"sys":887640,"idle":29105906,"irq":13156}}]
+SYSTEM => "win32"
+SERVER => "PC16S50"
