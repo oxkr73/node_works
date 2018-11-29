@@ -34,12 +34,21 @@ let studentsController = {
       .catch(error => res.json(error.message));
   },
 
-  delete: (req, res) => {
-    Student.remove({ n: req.body.name })
+  delete: async function(req, res) {
+    await Student.findOne({ n: req.body.name })
       .then(student => {
+        stu = new Student(student);
+        return stu;
+      })
+      .catch(err => console.log(err));
+
+    await stu
+      .remove()
+      .then(student => {
+        console.log("Eliminado " + student);
         res.json(student);
       })
-      .catch(console.error.bind(console, "error: "));
+      .catch(err => console.log(err));
   },
 
   update: (req, res) => {

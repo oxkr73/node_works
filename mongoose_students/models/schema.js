@@ -32,7 +32,7 @@ function toUppercase() {
   student["n"] = student.n.toUpperCase();
 }
 
-studentSchema.post("deleteOne", function(doc) {
+studentSchema.post("remove", function(doc) {
   console.log(doc);
 });
 
