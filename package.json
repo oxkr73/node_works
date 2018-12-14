@@ -9,13 +9,15 @@
   "author": "oxkr",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "connect": "^3.6.6",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "moment": "^2.22.2"
   },
   "devDependencies": {
     "copy-dir": "^0.4.0",
-    "mongoose": "^5.3.13",
+    "mongoose": "^5.3.14",
     "zip-local": "^0.3.4"
   }
 }

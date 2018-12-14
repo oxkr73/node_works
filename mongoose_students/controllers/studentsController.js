@@ -2,6 +2,7 @@ const connectionDB = require("../config/connection.js");
 const schema = require("../models/schema");
 const Student = schema.Student;
 const Project = schema.Project;
+const Person = schema.Person;
 
 let studentsController = {
   index: (req, res) => {
@@ -30,6 +31,20 @@ let studentsController = {
     Student.create(student)
       .then(student => {
         res.json(student);
+      })
+      .catch(error => res.json(error.message));
+  },
+
+  createPerson: (req, res) => {
+    person = new Person(req.body);
+    let projects = req.body.projects || [];
+    /*for (project of projects) {
+      student.projects.push(project);
+    }*/
+
+    Person.create(person)
+      .then(person => {
+        res.json(person);
       })
       .catch(error => res.json(error.message));
   },

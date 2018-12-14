@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  let productList = document.createElement('ul')
+
+  const myHeaders = new Headers();
+//  myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+  myHeaders.append('authorization', `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YzA2YjYyZDBkMTExYmRjZDhlMjA4NjAiLCJpYXQiOjE1NDM5NDM3MjUsImV4cCI6MTU0NTE1MzMyNX0.R8xxBknax7-vlqSu_WRljQDPvZCn04BL6hp7lQuB__4`)
+  fetch('/api/product', {
+    method: 'GET',
+    headers: myHeaders
+  })
+  .then(res => res.json())
+  .then(data => {
+    data.products.map(product => {
+      let text = document.createTextNode(product.name)
+      let elem = document.createElement('li')
+      elem.appendChild(text)
+      productList.appendChild(elem)
+    })
+
+    document.body.appendChild(productList)
+  })
+</script>
